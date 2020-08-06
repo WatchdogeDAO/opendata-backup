@@ -1,4 +1,5 @@
 data/
 new_data/
 node_modules/
+tmp/
 .env

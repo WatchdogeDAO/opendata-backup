@@ -1,0 +1,22 @@
+{
+  "catalogo_id": "sspm",
+  "catalogo_titulo": "Datos Programación Macroeconómica",
+  "catalogo_responsable": "Subsecretaría de Programación Macroeconómica.",
+  "dataset_id": "1.0",
+  "dataset_titulo": "Oferta y Demanda Globales. Datos desestacionalizados. Base 1993",
+  "dataset_descripcion": "Componentes desestacionalizados de la oferta y demanda globales a precios de 1993.",
+  "dataset_responsable": "Subsecretaría de Programación Macroeconómica",
+  "dataset_responsable_correo": "datoseconomicos@mecon.gov.ar",
+  "dataset_fuente": "Instituto Nacional de Estadística y Censos (INDEC)",
+  "dataset_tema_especifico": "actividad",
+  "dataset_tema_global": "ECON",
+  "dataset_licencia": "Creative Commons Attribution 4.0",
+  "distribucion_id": "1.1",
+  "distribucion_titulo": "Oferta y Demanda Global. Precios constantes desestacionalizados. Base 1993. Valores anuales.",
+  "distribucion_descripcion": "Oferta y Demanda Globales por componente, a precios de comprador, en millones de pesos de 1993 y valores anuales desestacionalizados.",
+  "distribucion_url_descarga": "https://infra.datos.gob.ar/catalog/sspm/dataset/1.0/distribution/1.1/download/oferta-demanda-globales-datos-desestacionalizados-valores-anuales-base-1993.csv",
+  "distribucion_url_acceso": "https://www.minhacienda.gob.ar/secretarias/politica-economica/programacion-macroeconomica/",
+  "distribucion_tipo": "",
+  "distribucion_formato": "CSV",
+  "hash": "Qmdj7ENLqEGXz9eveSq9nT3wNCps3P1hRx6xzXLhn4aKRk"
+}
