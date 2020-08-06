@@ -10,7 +10,7 @@ dotenv.config();
 
 const key = process.env.PINATA_API_KEY;
 const secret = process.env.PINATA_API_SECRET;
-const dir = 'tmp';
+const dir = 'data';
 
 const main = async () => {
   if (!fs.existsSync(dir)) {
@@ -42,8 +42,10 @@ const main = async () => {
           pinata_secret_api_key: secret,
         },
       });
+      element.fileName = fileName;
       element.ipfsHash = response.data.IpfsHash;
       console.log('Successful Upload:', response.data.IpfsHash);
+      break;
     } catch (e) {
       // TODO: Of course make this more solid.
       console.log('Could not upload:', index, e);
