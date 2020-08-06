@@ -45,7 +45,6 @@ const main = async () => {
       element.fileName = fileName;
       element.ipfsHash = response.data.IpfsHash;
       console.log('Successful Upload:', response.data.IpfsHash);
-      break;
     } catch (e) {
       // TODO: Of course make this more solid.
       console.log('Could not upload:', index, e);
