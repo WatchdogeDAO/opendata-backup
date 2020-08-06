@@ -44,6 +44,7 @@ const main = async () => {
       });
       element.fileName = fileName;
       element.ipfsHash = response.data.IpfsHash;
+      fs.writeFileSync('snapshot.json', JSON.stringify(data));
       console.log('Successful Upload:', response.data.IpfsHash);
     } catch (e) {
       // TODO: Of course make this more solid.
@@ -51,25 +52,27 @@ const main = async () => {
       data.splice(index, 1);
     }
   }
-
-  fs.writeFileSync('snapshot.json', JSON.stringify(data));
 };
 
 async function downloadVideo(url, fileName) {
-  const writer = fs.createWriteStream(fileName);
+  try {
+    const writer = fs.createWriteStream(fileName);
 
-  const response = await axios({
-    url,
-    method: 'GET',
-    responseType: 'stream',
-  });
+    const response = await axios({
+      url,
+      method: 'GET',
+      responseType: 'stream',
+    });
 
-  response.data.pipe(writer);
+    response.data.pipe(writer);
 
-  return new Promise((resolve, reject) => {
-    writer.on('finish', resolve);
-    writer.on('error', reject);
-  });
+    return new Promise((resolve, reject) => {
+      writer.on('finish', resolve);
+      writer.on('error', reject);
+    });
+  } catch (e) {
+    throw new Error("Couldn't download", fileName);
+  }
 }
 
 function parseFileType(fileType) {

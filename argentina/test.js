@@ -1,14 +1,9 @@
-let list = [
-  {
-    name: 'mau',
-  },
-  {
-    name: 'emi',
-  },
-];
+const fs = require('fs');
 
-for (let element of list) {
-  element.name = 'Nick';
-}
-
-console.log(list);
+fs.writeFileSync('nene.json', JSON.stringify({nene: 1}));
+fs.writeFileSync('nene.json', JSON.stringify({nene: 1}));
+fs.writeFileSync('nene.json', JSON.stringify({nene: 1}));
+fs.writeFileSync('nene.json', JSON.stringify({nene: 1}));
+fs.writeFileSync('nene.json', JSON.stringify({nene: 1}));
+fs.writeFileSync('nene.json', JSON.stringify({nene: 1}));
+fs.writeFileSync('nene.json', JSON.stringify({nene: 1}));
